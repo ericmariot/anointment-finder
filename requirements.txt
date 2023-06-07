@@ -1,0 +1,6 @@
+# pip install -r file
+# runs pip for every line in the file
+
+beautifulsoup4
+requests
+black
