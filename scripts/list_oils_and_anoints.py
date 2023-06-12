@@ -1,8 +1,9 @@
 import requests
 import json
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
-base_url = "poewiki.net"
+base_url = "https://www.poewiki.net"
 list_of_anointments = requests.get("https://www.poewiki.net/wiki/List_of_anointments")
 
 soup = BeautifulSoup(list_of_anointments.text, "html.parser")
@@ -26,26 +27,27 @@ for titles in table_titles[0]:
     print(titles.text)
 
 print(f"Exctracting anointment info...")
-for anoint in every_anoint:
+for tr in every_anoint:
     print("Extracting new anointment...")
     count = 0
     oils = []
+    outcome = {}
     description = []
-    outcome = []
-    img_link = []
-    for td in anoint:
+    for td in tr:
         for a in td:
             if count < 3:
-                oils.append(a.text)
+                oils.append(
+                    {"name": a.text, "img_link": urljoin(base_url, td.img["src"])}
+                )
             elif count == 3:
-                outcome.append({"name": a.text})
+                outcome["name"] = a.text
                 if td.img:
-                    outcome.append({"img_link": base_url + td.img.get("src")})
+                    outcome["img_link"] = urljoin(base_url, td.img["src"])
             else:
                 if a.text:
                     description.append(a.text)
             count += 1
-    outcome.append({"description": description})
+    outcome["description"] = description
     anoint = {"oils": oils, "outcome": outcome}
     all_anoints.append(anoint)
 
