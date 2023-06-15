@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "anointments.urls"
+ROOT_URLCONF = "anointments-finder.urls"
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "anointments.wsgi.application"
+WSGI_APPLICATION = "anointments-finder.wsgi.application"
 
 
 # Database
