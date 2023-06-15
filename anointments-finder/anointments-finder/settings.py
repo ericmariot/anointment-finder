@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "anointments.apps.AnointmentsConfig",
     "oils.apps.OilsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
