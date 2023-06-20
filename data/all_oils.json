@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Golden Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/2/29/Golden_Oil_inventory_icon.png/16px-Golden_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Silver Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/8/83/Silver_Oil_inventory_icon.png/16px-Silver_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Opalescent Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/c/cd/Opalescent_Oil_inventory_icon.png/16px-Opalescent_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Black Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/2/21/Black_Oil_inventory_icon.png/16px-Black_Oil_inventory_icon.png"
+    },{
+        "name": "Crimson Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/f/ff/Crimson_Oil_inventory_icon.png/16px-Crimson_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Violet Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/1/1f/Violet_Oil_inventory_icon.png/16px-Violet_Oil_inventory_icon.png"
+    },{
+        "name": "Indigo Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/e/e2/Indigo_Oil_inventory_icon.png/16px-Indigo_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Azure Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/e/eb/Azure_Oil_inventory_icon.png/16px-Azure_Oil_inventory_icon.png"
+    },{
+        "name": "Teal Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/5/58/Teal_Oil_inventory_icon.png/16px-Teal_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Verdant Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/f/f5/Verdant_Oil_inventory_icon.png/16px-Verdant_Oil_inventory_icon.png"
+    },{
+        "name": "Amber Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/b/ba/Amber_Oil_inventory_icon.png/16px-Amber_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Sepia Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/1/19/Sepia_Oil_inventory_icon.png/16px-Sepia_Oil_inventory_icon.png"
+    },
+    {
+        "name": "Clear Oil",
+        "img_link": "https://www.poewiki.net/images/thumb/2/21/Clear_Oil_inventory_icon.png/16px-Clear_Oil_inventory_icon.png"
+    }
+]
