@@ -19,7 +19,7 @@ class Command(BaseCommand):
         with open(file_path) as file:
             anointments = json.load(file)
 
-        oils_dict = {oil.name:oil for oil in Oil.objects.all()}
+        oils_dict = {oil.name: oil for oil in Oil.objects.all()}
 
         for anoint in anointments:
             print("\n")
@@ -34,7 +34,6 @@ class Command(BaseCommand):
             print("New set of oils!!")
             for oil_data in oils:
                 oil_names.append(oil_data["name"])
-
 
             Anointment.objects.update_or_create(
                 name=anoint_name,
