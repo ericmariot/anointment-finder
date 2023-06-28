@@ -13,5 +13,9 @@ class Anointment(models.Model):
 
     objects = AnointmentManager()
 
+    @property
+    def oils(self):
+        return [self.oil_1, self.oil_2, self.oil_3]
+
     def __str__(self):
         return self.name
