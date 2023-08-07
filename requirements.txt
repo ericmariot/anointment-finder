@@ -6,3 +6,6 @@ requests
 black
 django
 python-dotenv
+pytest
+pytest-django
+factory-boy
