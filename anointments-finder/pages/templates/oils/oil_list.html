@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block title %}Oils{% endblock title %}
+
+{% block content %}
+{% for oil in oil_list %}
+<div>
+    <h2>{{ oil.name }}</a></h2>
+    <h2>{{ oil.img_link }}</a></h2>
+    <br>
+</div>
+{% endfor %}
+{% endblock content %}

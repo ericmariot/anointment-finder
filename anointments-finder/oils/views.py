@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Oil
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the oils index.")
+class OilListView(ListView):
+    model = Oil
+    context_object_name = "oil_list"
+    template_name = "oils/oil_list.html"

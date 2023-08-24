@@ -1,7 +1,7 @@
 from django.urls import path
 
-from . import views
+from .views import OilListView
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", OilListView.as_view(), name="oil_list"),
 ]

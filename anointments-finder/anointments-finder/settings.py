@@ -30,8 +30,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # local
     "anointments.apps.AnointmentsConfig",
     "oils.apps.OilsConfig",
+    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
@@ -50,7 +52,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
-        "APP_DIRS": True,
+        "APP_DIRS": [BASE_DIR / "templates"],
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
