@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block title %}Anointments{% endblock title %}
+
+{% block content %}
+{% for anointment in anointment_list %}
+<div>
+    <h2>{{ anointment.name }}</a></h2>
+    <h2>{{ anointment.description }}</a></h2>
+    <h2>{{ anointment.img_link }}</a></h2>
+    <h2>{{ anointment.oils }}</a></h2>
+    <br>
+</div>
+{% endfor %}
+{% endblock content %}

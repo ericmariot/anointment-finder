@@ -1,0 +1,52 @@
+{% extends "_base.html" %}
+
+{% block title %}
+Anointment Finder
+{% endblock title %}
+
+{% block content %}
+{% for oil in oils %}
+<div>
+    <input type="checkbox" onchange='handleChange(this)' id="oil-{{ oil.name }}" name="{{ oil.name }}" />
+    <label for="oil-{{ oil.name }}">{{oil.name}}</label>
+    <br>
+</div>
+{% endfor %}
+
+{% for anointment in anointments %}
+<div>
+    <h2>{{ anointment.name }}</a></h2>
+    <h2>{{ anointment.description }}</a></h2>
+    <h2>{{ anointment.img_link }}</a></h2>
+    <h2>{{ anointment.oils }}</a></h2>
+    <br>
+</div>
+{% endfor %}
+<script>
+    const urlObj = new URL(window.location.href);
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+    const params = urlObj.searchParams
+
+    for (const value of params.values()) {
+        for (const checkbox of checkboxes) {
+            if (checkbox.name === value)
+                checkbox.checked = true
+        }
+
+    }
+
+    function handleChange(checkbox) {
+        params.delete('oil')
+
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked === true)
+                params.append('oil', checkbox.name)
+        }
+        reloadPage(params)
+    }
+
+    function reloadPage(params) {
+        location.href = urlObj.href
+    }
+</script>
+{% endblock content %}
