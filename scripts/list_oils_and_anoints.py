@@ -45,7 +45,7 @@ for tr in every_anoint:
                     outcome["img_link"] = urljoin(base_url, td.img["src"])
             else:
                 if a.text:
-                    description.append(a.text)
+                    description.append(f"{a.text};")
             count += 1
     outcome["description"] = description
     anoint = {"oils": oils, "outcome": outcome}

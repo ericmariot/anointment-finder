@@ -5,23 +5,40 @@ Anointment Finder
 {% endblock title %}
 
 {% block content %}
-{% for oil in oils %}
-<div>
-    <input type="checkbox" onchange='handleChange(this)' id="oil-{{ oil.name }}" name="{{ oil.name }}" />
-    <label for="oil-{{ oil.name }}">{{oil.name}}</label>
-    <br>
-</div>
-{% endfor %}
+<div class="outside-anointment-container">
 
-{% for anointment in anointments %}
-<div>
-    <h2>{{ anointment.name }}</a></h2>
-    <h2>{{ anointment.description }}</a></h2>
-    <h2>{{ anointment.img_link }}</a></h2>
-    <h2>{{ anointment.oils }}</a></h2>
-    <br>
+    {% for anointment in anointments %}
+    <div class="anointment-container">
+        <div class="outside-img-name">
+            <div class="anointment-img-link">
+                <img src="{{ anointment.img_link }}" alt="{{ anointment.name }}">
+            </div>
+            <div class="anointment-name">
+                <h1> {{ anointment.name }} </a></h1>
+            </div>
+        </div>
+        <h2> {{ anointment.description }} </a></h2>
+        <div class="outside-anointment-oil-container">
+            {% for oil in anointment.oils %}
+            <div class="anointment-oil-container">
+                <img src="{{ oil.img_link }}" alt="{{ oil }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
+<div class="outside-checkbox-container">
+    {% for oil in oils %}
+    <div class="checkbox-container">
+        <input type="checkbox" onchange='handleChange(this)' id="oil-{{ oil.name }}" name="{{ oil.name }}" />
+        <img src="{{ oil.img_link }}" alt="{{ oil.name }}">
+        <label for="oil-{{ oil.name }}"> {{ oil.name }} </label>
+    </div>
+    {% endfor %}
+</div>
+
 <script>
     const urlObj = new URL(window.location.href);
     const checkboxes = document.querySelectorAll('input[type="checkbox"]')
