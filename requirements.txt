@@ -9,3 +9,4 @@ python-dotenv
 pytest
 pytest-django
 factory-boy
+whitenoise

@@ -28,7 +28,8 @@ class Command(BaseCommand):
             oils = anoint["oils"]
             outcome = anoint["outcome"]
             anoint_name = outcome["name"]
-            anoint_img_link = outcome["img_link"]
+            anoint_img_link = outcome.get("img_link", "")
+
             description = "\n".join(outcome["description"])
 
             print("New set of oils!!")
